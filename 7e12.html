@@ -1,20 +1,20 @@
 <!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>基于Python的Spark——入门篇 | MWT's Blog</title><meta name="keywords" content="大数据,Spark,Python"><meta name="author" content="MuWenTao"><meta name="copyright" content="MuWenTao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大数据Spark组件入门篇自测题，方便日后复习使用。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Python的Spark——入门篇">
-<meta property="og:url" content="http://1.15.41.208/7e12.html">
+<meta property="og:url" content="https://whitevenus.github.io/whitevenus/7e12.html">
 <meta property="og:site_name" content="MWT&#39;s Blog">
 <meta property="og:description" content="大数据Spark组件入门篇自测题，方便日后复习使用。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/whitevenus/CDN/img/album/album20210803161225.jpg">
+<meta property="og:image" content="https://whitevenus.github.io/whitevenus/img/cover/spark_on_python.jpg">
 <meta property="article:published_time" content="2021-12-27T02:03:20.000Z">
-<meta property="article:modified_time" content="2021-12-27T10:24:03.957Z">
+<meta property="article:modified_time" content="2021-12-27T11:15:16.059Z">
 <meta property="article:author" content="MuWenTao">
 <meta property="article:tag" content="大数据">
 <meta property="article:tag" content="Spark">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/whitevenus/CDN/img/album/album20210803161225.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://1.15.41.208/7e12"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
+<meta name="twitter:image" content="https://whitevenus.github.io/whitevenus/img/cover/spark_on_python.jpg"><link rel="shortcut icon" href="/whitevenus/img/favicon.ico"><link rel="canonical" href="https://whitevenus.github.io/whitevenus/7e12"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/whitevenus/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/whitevenus/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
@@ -60,7 +60,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-12-27 18:24:03'
+  postUpdate: '2021-12-27 19:15:16'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -140,11 +140,11 @@
       }
     }
     detectApple()
-    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-map-signs"></i><span> 目录</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-motorcycle"></i><span> 爱好</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fa fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fa fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/love/"><i class="fa-fw fa fa-heart"></i><span> Love</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user-circle"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/whitevenus/CDN/img/album/album20210803161225.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">MWT's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-map-signs"></i><span> 目录</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-motorcycle"></i><span> 爱好</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fa fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fa fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/love/"><i class="fa-fw fa fa-heart"></i><span> Love</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user-circle"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">基于Python的Spark——入门篇</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-27T02:03:20.000Z" title="发表于 2021-12-27 10:03:20">2021-12-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-27T10:24:03.957Z" title="更新于 2021-12-27 18:24:03">2021-12-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="基于Python的Spark——入门篇"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>Spark基础入门</h1>
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/whitevenus/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/whitevenus/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/whitevenus/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/whitevenus/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-map-signs"></i><span> 目录</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/whitevenus/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/whitevenus/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/whitevenus/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-motorcycle"></i><span> 爱好</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/whitevenus/books/"><i class="fa-fw fa fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/whitevenus/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/whitevenus/games/"><i class="fa-fw fa fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/whitevenus/album/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/whitevenus/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/whitevenus/love/"><i class="fa-fw fa fa-heart"></i><span> Love</span></a></div><div class="menus_item"><a class="site-page" href="/whitevenus/about/"><i class="fa-fw fa fa-user-circle"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/whitevenus/img/cover/spark_on_python.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/whitevenus/">MWT's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/whitevenus/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-map-signs"></i><span> 目录</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/whitevenus/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/whitevenus/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/whitevenus/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-motorcycle"></i><span> 爱好</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/whitevenus/books/"><i class="fa-fw fa fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/whitevenus/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/whitevenus/games/"><i class="fa-fw fa fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/whitevenus/album/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/whitevenus/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/whitevenus/love/"><i class="fa-fw fa fa-heart"></i><span> Love</span></a></div><div class="menus_item"><a class="site-page" href="/whitevenus/about/"><i class="fa-fw fa fa-user-circle"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">基于Python的Spark——入门篇</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-27T02:03:20.000Z" title="发表于 2021-12-27 10:03:20">2021-12-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-27T11:15:16.059Z" title="更新于 2021-12-27 19:15:16">2021-12-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/whitevenus/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="基于Python的Spark——入门篇"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>Spark基础入门</h1>
 <p>Spark解决什么问题？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark解决的问题</span></div>
     <div class="hide-content"><p>Spark主要解决海量数据的计算问题，可以进行离线批处理及实时流计算。</p>
 </div></div>
 </li>
@@ -152,7 +152,7 @@
 <p>Spark有哪些模块？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark的模块</span></div>
     <div class="hide-content"><p>Spark主要有5个模块：</p>
 <ul>
 <li>核心模块：SparkCore</li>
@@ -167,7 +167,7 @@
 <p>Spark特点有哪些？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark特点</span></div>
     <div class="hide-content"><p>Spark的特点主要有4个：</p>
 <ul>
 <li>速度快</li>
@@ -181,7 +181,7 @@
 <p>Spark的运行模式有哪几种？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark的运行模式</span></div>
     <div class="hide-content"><p>Spark运行模式主要有3类：</p>
 <ul>
 <li>本地模式</li>
@@ -194,7 +194,7 @@
 <p>Spark的运行角色有哪些（对比YARN）？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark的运行角色</span></div>
     <div class="hide-content"><p>Spark的运行角色主要有4类：</p>
 <ul>
 <li>Master：集群资源管理（类同于ResourceManager）</li>
@@ -208,7 +208,7 @@
 <p>Local模式的运行原理是什么？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Local模式的运行原理</span></div>
     <div class="hide-content"><p>Local模式就是以一个独立进程配合其内部线程来提供完成Spark运行时的环境，Local模式可以通过<code>spark-shell</code>、<code>pyspark</code>、<code>spark-submit</code>等开启。</p>
 </div></div>
 </li>
@@ -216,14 +216,7 @@
 <p><code>bin/pyspark</code>是什么程序？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
-    <div class="hide-content"></div></div>
-</li>
-</ul>
-<p><code>bin/pyspark</code>是什么程序？</p>
-<ul>
-<li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>pyspark</span></div>
     <div class="hide-content"><p><code>pyspark</code>是一个交互式的解释器执行环境，环境启动后就得到了一个Local Spark环境，可以运行Python代码进行Spark计算。</p>
 </div></div>
 </li>
@@ -231,7 +224,7 @@
 <p>Spark的4040端口是什么？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark的4040端口</span></div>
     <div class="hide-content"><p>Spark的任务在运行时，会在Driver所在的机器绑定到4040端口，提供当前任务的监控页面。若Driver机器的4040端口已被占用，则会顺延端口（如：4041、4042、…）进行绑定。</p>
 </div></div>
 </li>
@@ -239,7 +232,7 @@
 <p>StandAlone的原理？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>StandAlone的原理</span></div>
     <div class="hide-content"><p>Master和Worker角色以独立进程的形式存在，并组成Spark运行时环境（集群）。</p>
 </div></div>
 </li>
@@ -247,7 +240,7 @@
 <p>Spark角色在StandAlone中的分布？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark角色在StandAlone中的分布</span></div>
     <div class="hide-content"><p>在StandAlone模式中：</p>
 <ul>
 <li>Master角色以Master进程独立存在</li>
@@ -261,7 +254,7 @@
 <p>StandAlone如何提交Spark应用？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>提交Spark应用</span></div>
     <div class="hide-content"><p>通过<code>spark-submit</code>提交一个Spark应用。</p>
 </div></div>
 </li>
@@ -269,7 +262,7 @@
 <p>4040、8080、18080端口分别是什么？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark的4040、8080、18080端口</span></div>
     <div class="hide-content"><p>4040是单个程序运行时绑定的端口，可供查看本任务运行时情况。其是和Driver绑定的。是一个临时端口，当任务运行完后，便不存在了。</p>
 <p>8080是Master运行是默认的Web页面端口。</p>
 <p>18080是Spark历史服务器的Web页面端口，主要用于查看历史运行任务的具体情况。</p>
@@ -279,20 +272,112 @@
 <p>Job、State、Task的关系？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Job、State、Task的关系</span></div>
     <div class="hide-content"><p>一个Spark程序会被分成多个子任务（Job）运行，每一个Job会分成多个阶段（State）来运行，每一个阶段内会分出多个线程（Task）来执行具体任务。</p>
 </div></div>
 </li>
 </ul>
+<p><span style=color:red>第四章及以后~</span></p>
 <h1>SparkCore</h1>
-<p><span style=color:red>第一章~</span></p>
-<p><span style=color:red>第二章~</span></p>
-<p><span style=color:red>第三章~</span></p>
-<p><span style=color:red>第三四章作业~</span></p>
-<p>Cache和Checkpoint的区别？</p>
+<p><span style=color:red>第四章作业~</span></p>
+<p><span style=color:red>第二章各个算子~</span></p>
+<p>如何正确理解RDD？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>理解RDD</span></div>
+    <div class="hide-content"><p>RDD是弹性分布式数据集，是分布式计算的实现载体（数据抽象）。</p>
+</div></div>
+</li>
+</ul>
+<p>RDD的五大特点分别是什么？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>RDD的五大特点</span></div>
+    <div class="hide-content"><p>RDD的五个特点是：</p>
+<ul>
+<li>RDD是有分区的</li>
+<li>作用在每一个RDD的算子都会作用在该RDD的每一个分区上</li>
+<li>RDD是有依赖关系的</li>
+<li>KV型的RDD是可以构建分区（默认hash分区）的，可选的</li>
+<li>RDD的计算会尽量靠近数据所在的位置</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s2.loli.net/2021/12/27/MrYw4N26ivCnuFk.jpg" alt="RDD的五个特点"></p>
+</div></div>
+</li>
+</ul>
+<p>RDD创建有哪几种方法？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>RDD创建</span></div>
+    <div class="hide-content"><p>RDD创建的两类方法是：</p>
+<ol>
+<li>通过并行化集合的方式创建（将本地集合转为分布式集合）：<code>sparallelize(本地集合)</code></li>
+<li>通过读取文件的方式进行创建：<code>TextFile(文件路径)</code>（使用于大文件）、<code>WholeTextFile(文件路径)</code>（适用于多个小文件）</li>
+</ol>
+</div></div>
+</li>
+</ul>
+<p>RDD分区数如何查看？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>RDD分区数</span></div>
+    <div class="hide-content"><p>RDD的分区数可以通过<code>getNumPartitions()</code>查看，返回值是<code>int</code>。</p>
+</div></div>
+</li>
+</ul>
+<p>Transformation算子和Action算子的区别？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Transformation算子和Action算子的区别</span></div>
+    <div class="hide-content"><p>两者的区别是：</p>
+<ol>
+<li>转换算子的返回值是RDD，而Action算子的返回值不是RDD</li>
+<li>转换算子是懒加载的，而Action算子就是转换算子处理链条的开关</li>
+</ol>
+</div></div>
+</li>
+</ul>
+<p>哪两个Action算子的结果是不经过Driver，直接由Executor输出的？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>两个特殊的Action算子</span></div>
+    <div class="hide-content"><p><code>foreach()</code>算子和<code>saveTextFile()</code>算子的结果直接由Executor输出，不会汇集到Driver中去。</p>
+</div></div>
+</li>
+</ul>
+<p>reduceByKey和groupByKey的区别？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>reduceByKey和groupByKey的区别</span></div>
+    <div class="hide-content"><p>这两个算子的区别是：</p>
+<ul>
+<li>从功能上来看：<code>reduceByKey()</code>自带聚合逻辑，<code>groupByKey()</code>只做分组处理</li>
+<li>从做数据聚合的效率来看：<code>reduceByKey()</code>的效率更好，因为带了组内聚合，即可以先聚合后shuffle，最终再聚合，会减少网络IO的消耗。</li>
+</ul>
+</div></div>
+</li>
+</ul>
+<p>mapPartitions和foreachPartion的区别？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>mapPartitions和foreachPartion的区别</span></div>
+    <div class="hide-content"><p>两个算子的区别是：<code>mapPartions()</code>带有返回值，是一个Transformation算子；而<code>foreachPartition()</code>不带返回值，是一个Action算子。</p>
+<p>二者共同的特点是：都是一次处理整个分区的数据，比普通的<code>map()</code>和<code>foreach()</code>性能好。</p>
+</div></div>
+</li>
+</ul>
+<p>对于分区操作有什么要注意的地方？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>分区操作有什么要注意的地方</span></div>
+    <div class="hide-content"><p>尽量不要增加分区，可能会破坏内存迭代倒的计算管道。</p>
+</div></div>
+</li>
+</ul>
+<p>Cache和Checkpoint的区别是什么？</p>
+<ul>
+<li>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Cache和Checkpoint的区别</span></div>
     <div class="hide-content"><p>Cache轻量化保存RDD数据，可存储在内存和硬盘，是分散存储，设计上数据是不安全的（保留RDD血缘关系）。</p>
 <p>CheckPoint是重量级保存RDD数据，是集中存储，只能存储在硬盘（HDFS）上，设计上是安全的（不保留RDD血缘关系）。</p>
 </div></div>
@@ -301,7 +386,7 @@
 <p>Cache和Checkpoint的性能对比？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Cache和Checkpoint的性能对比</span></div>
     <div class="hide-content"><p>Cache性能更好，因为是分散存储，各个Executor并行执行，可以将RDD数据保存到内存中，效率高。</p>
 <p>CheckPoint比较慢，因为是集中存储，涉及到网络IO，但是存储在HDFS上更安全（多副本）。</p>
 </div></div>
@@ -310,7 +395,7 @@
 <p>为什么一个yarn模式的spark任务代码所依赖的库需要在所有的集群服务器上都要安装呢？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>yarn模式依赖包安装问题</span></div>
     <div class="hide-content"><p>因为YARN是集群运行的，Executor在所有服务器上执行，所以每个服务器都需要有所依赖的库。</p>
 </div></div>
 </li>
@@ -318,7 +403,7 @@
 <p>如何尽量提高任务计算的资源？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>提高任务计算的资源</span></div>
     <div class="hide-content"><p>使用<code>cat /proc/cpuinfo | grep processor</code>查看cpu核数，使用<code>free -g</code>查看内存大小，从而得知集群总资源。之后使用<code>--executor-cores</code>指定每个Executor所使用的cpu核心数，使用<code>--executor-memory</code>指定每个Executor内存，使用<code>--num-excutors</code>指定Executor个数。</p>
 </div></div>
 </li>
@@ -326,11 +411,8 @@
 <p>广播变量解决了什么问题？使用方法是什么？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
-    <div class="hide-content"><p>广播变量主要解决的问题是：</p>
-<ul>
-<li>分布式集合RDD和本地集合进行关联使用时，降低了Executor内存占用、减少了网络IO传输，提高了性能。</li>
-</ul>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>广播变量</span></div>
+    <div class="hide-content"><p>广播变量主要解决的问题是：分布式集合RDD和本地集合进行关联使用时，降低了Executor内存占用、减少了网络IO传输，提高了性能。</p>
 <p>通过<code>broadcast(本地集合)</code>算子得到广播变量<code>broadCast</code>，通过<code>broadCast.value</code>使用广播变量。</p>
 </div></div>
 </li>
@@ -338,11 +420,8 @@
 <p>累加器解决了什么问题？使用方法是什么？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
-    <div class="hide-content"><p>累加器主要解决的问题是：</p>
-<ul>
-<li>分布式代码执行过程中完成全局累加的操作</li>
-</ul>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>累加器</span></div>
+    <div class="hide-content"><p>累加器主要解决的问题是：分布式代码执行过程中完成全局累加的操作</p>
 <p>通过<code>accumulator(初始值)</code>得到累加器。</p>
 </div></div>
 </li>
@@ -352,7 +431,7 @@
 <li>
 <div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark中的DAG</span></div>
     <div class="hide-content"><p>Spark的核心是基于RDD实现的，Spark Scheduler是spark核心实现的重要一环，其作用就是任务调度。spark的任务调度就是如何组织任务去处理RDD中每个分区的数据，根据RDD的依赖关系构建DAG，基于DAG划分Stage，将每个Stage中的任务发送到指定节点运行。基于Spark的任务调度原理，可以合理规划资源利用，做到尽可能使用最少的资源高效完成任务计算。</p>
-<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="E:%5CAfter_school_project%5CMyBlog%5C%E6%96%87%E7%AB%A0%E5%AF%B9%E5%BA%94%E8%B5%84%E6%BA%90%5C%E5%9F%BA%E4%BA%8Epython%E7%9A%84Spark%E5%85%A5%E9%97%A8%E7%AF%87%5CwordCount%E7%A8%8B%E5%BA%8F%E7%9A%84DAG%E5%9B%BE.jpg" alt="wordCount案例地DAG示意图"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s2.loli.net/2021/12/27/L217Nr9bjVDfgQn.jpg" alt="wordCount案例地DAG示意图"></p>
 </div></div>
 </li>
 </ul>
@@ -361,7 +440,7 @@
 <li>
 <div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>DAG定义</span></div>
     <div class="hide-content"><p>DAG是有向无环图，即它是一个有方向、无闭环的任务执行流程图。作用就是标识代码的<strong>逻辑</strong>执行流程。</p>
-<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="E:%5CAfter_school_project%5CMyBlog%5C%E6%96%87%E7%AB%A0%E5%AF%B9%E5%BA%94%E8%B5%84%E6%BA%90%5C%E5%9F%BA%E4%BA%8Epython%E7%9A%84Spark%E5%85%A5%E9%97%A8%E7%AF%87%5CDAG%E5%9B%BE.jpg" alt="Spark中的一个DAG图"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s2.loli.net/2021/12/27/GlyRtpiUPKV5SgN.jpg" alt="Spark中的一个DAG图"></p>
 </div></div>
 </li>
 </ul>
@@ -389,11 +468,11 @@
 <div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>DAG的宽窄依赖和阶段划分</span></div>
     <div class="hide-content"><p>Spark RDD前后之间的依赖关系可以分为<strong>宽依赖</strong>和<strong>窄依赖</strong>两种。宽依赖还有一个别名是<code>shuffle</code>。</p>
 <p>窄依赖是指父RDD的一个分区会将全部数据发送给子RDD的<strong>一个</strong>分区。</p>
-<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="E:%5CAfter_school_project%5CMyBlog%5C%E6%96%87%E7%AB%A0%E5%AF%B9%E5%BA%94%E8%B5%84%E6%BA%90%5C%E5%9F%BA%E4%BA%8Epython%E7%9A%84Spark%E5%85%A5%E9%97%A8%E7%AF%87%5C%E7%AA%84%E4%BE%9D%E8%B5%96%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="窄依赖示意图"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s2.loli.net/2021/12/27/2tfpBa4GCIcDgvj.jpg" alt="窄依赖示意图"></p>
 <p>宽依赖是指父RDD的一个分区会将数据发送给子RDD的<strong>多个</strong>分区。</p>
-<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="E:%5CAfter_school_project%5CMyBlog%5C%E6%96%87%E7%AB%A0%E5%AF%B9%E5%BA%94%E8%B5%84%E6%BA%90%5C%E5%9F%BA%E4%BA%8Epython%E7%9A%84Spark%E5%85%A5%E9%97%A8%E7%AF%87%5C%E5%AE%BD%E4%BE%9D%E8%B5%96%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="宽依赖示意图"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s2.loli.net/2021/12/27/jben2QDiG8M3ty6.jpg" alt="宽依赖示意图"></p>
 <p>对于Spark来讲，会根据DAG按照宽依赖，划分不同的DAG阶段。即划分依据是：从后向前，遇到<strong>宽依赖</strong>就划分出一个阶段，称之为Stage。也就是说在一个Stage内部一定不存在宽依赖，只会由窄依赖。</p>
-<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="E:%5CAfter_school_project%5CMyBlog%5C%E6%96%87%E7%AB%A0%E5%AF%B9%E5%BA%94%E8%B5%84%E6%BA%90%5C%E5%9F%BA%E4%BA%8Epython%E7%9A%84Spark%E5%85%A5%E9%97%A8%E7%AF%87%5C%E9%98%B6%E6%AE%B5%E5%88%92%E5%88%86.jpg" alt="阶段划分示意图"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s2.loli.net/2021/12/27/cb8q17djVsKFA9a.jpg" alt="阶段划分示意图"></p>
 </div></div>
 </li>
 </ul>
@@ -490,7 +569,7 @@
 <li>Task划分</li>
 <li>将Task分配给Executor并监控其工作</li>
 </ul>
-<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="E:%5CAfter_school_project%5CMyBlog%5C%E6%96%87%E7%AB%A0%E5%AF%B9%E5%BA%94%E8%B5%84%E6%BA%90%5C%E5%9F%BA%E4%BA%8Epython%E7%9A%84Spark%E5%85%A5%E9%97%A8%E7%AF%87%5CSpark%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6.jpg" alt="Spark任务调度流程图"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s2.loli.net/2021/12/27/MS1vquOc3h6XY7A.jpg" alt="Spark任务调度流程图"></p>
 <p>Spark程序的调度流程如上图所示：</p>
 <ol>
 <li>构建Driver</li>
@@ -516,7 +595,7 @@
 <ul>
 <li>
 <div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Spark运行中的主要概念名词</span></div>
-    <div class="hide-content"><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="E:%5CAfter_school_project%5CMyBlog%5C%E6%96%87%E7%AB%A0%E5%AF%B9%E5%BA%94%E8%B5%84%E6%BA%90%5C%E5%9F%BA%E4%BA%8Epython%E7%9A%84Spark%E5%85%A5%E9%97%A8%E7%AF%87%5Cspark%E8%BF%90%E8%A1%8C%E4%B8%AD%E7%9A%84%E6%A6%82%E5%BF%B5%E5%90%8D%E8%AF%8D.jpg" alt="Spark运行中的主要概念名词"></p>
+    <div class="hide-content"><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s2.loli.net/2021/12/27/q5SoRHDfPJk3Nds.jpg" alt="Spark运行中的主要概念名词"></p>
 </div></div>
 </li>
 </ul>
@@ -545,7 +624,7 @@
 <p>内存迭代、阶段划分是指？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>内存迭代、阶段划分</span></div>
     <div class="hide-content"><p>基于DAG的宽窄依赖划分阶段，阶段内部都是窄依赖，可以构建内存迭代管道。</p>
 </div></div>
 </li>
@@ -553,13 +632,13 @@
 <p>DAG调度器主要做什么？</p>
 <ul>
 <li>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span></span></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>DAG调度器</span></div>
     <div class="hide-content"><p>构建Task分配用以任务管理</p>
 </div></div>
 </li>
 </ul>
 <h1>SparkSQL</h1>
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><a class="post-meta__tags" href="/tags/Spark/">Spark</a><a class="post-meta__tags" href="/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/whitevenus/CDN/img/album/album20210803161225.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/8a9c.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/cover/cv.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计算机视觉与图像处理概述</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">MuWenTao</div><div class="author-info__description">记录学习笔记和生活中的思考,期待与你的相遇</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/whitevenus"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:2153710263@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这里是MWT的1.0版本blog,基于Butterfly3.8.3主题,已完成基础魔改+npm插件化。欢迎通过QQ、评论、邮箱等方式与我交流，乐意探讨任何问题。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Spark基础入门</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">SparkCore</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">SparkSQL</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/7e12.html" title="基于Python的Spark——入门篇"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.jsdelivr.net/gh/whitevenus/CDN/img/album/album20210803161225.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于Python的Spark——入门篇"/></a><div class="content"><a class="title" href="/7e12.html" title="基于Python的Spark——入门篇">基于Python的Spark——入门篇</a><time datetime="2021-12-27T02:03:20.000Z" title="发表于 2021-12-27 10:03:20">2021-12-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/8a9c.html" title="计算机视觉与图像处理概述"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/cover/cv.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机视觉与图像处理概述"/></a><div class="content"><a class="title" href="/8a9c.html" title="计算机视觉与图像处理概述">计算机视觉与图像处理概述</a><time datetime="2021-12-14T00:13:24.000Z" title="发表于 2021-12-14 08:13:24">2021-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/fd4a.html" title="机器学习——入门篇"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/cover/MachineLearning.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器学习——入门篇"/></a><div class="content"><a class="title" href="/fd4a.html" title="机器学习——入门篇">机器学习——入门篇</a><time datetime="2021-12-04T05:22:00.000Z" title="发表于 2021-12-04 13:22:00">2021-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/437f.html" title="树与二叉树(手撕二叉树)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/cover/tree.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树与二叉树(手撕二叉树)"/></a><div class="content"><a class="title" href="/437f.html" title="树与二叉树(手撕二叉树)">树与二叉树(手撕二叉树)</a><time datetime="2021-10-21T05:22:00.000Z" title="发表于 2021-10-21 13:22:00">2021-10-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/42b2.html" title="串"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/cover/pattern%20match.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="串"/></a><div class="content"><a class="title" href="/42b2.html" title="串">串</a><time datetime="2021-10-13T00:22:00.000Z" title="发表于 2021-10-13 08:22:00">2021-10-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/whitevenus/CDN/img/album/album20210803161225.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 <i id="heartbeat" style="color:#FF6A6A" class="fa fa-heartbeat"></i> MuWenTao</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="http://www.muwentao.club/">blog</a> !</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/whitevenus/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><a class="post-meta__tags" href="/whitevenus/tags/Spark/">Spark</a><a class="post-meta__tags" href="/whitevenus/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="/whitevenus/img/cover/spark_on_python.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/whitevenus/img/wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/whitevenus/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/whitevenus/8a9c.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/cover/cv.jpg" onerror="onerror=null;src='/whitevenus/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计算机视觉与图像处理概述</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/avatar.jpg" onerror="this.onerror=null;this.src='/whitevenus/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">MuWenTao</div><div class="author-info__description">记录学习笔记和生活中的思考,期待与你的相遇</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/whitevenus/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/whitevenus/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/whitevenus/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/whitevenus"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:2153710263@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这里是MWT的1.0版本blog,基于Butterfly3.8.3主题,已完成基础魔改+npm插件化。欢迎通过QQ、评论、邮箱等方式与我交流，乐意探讨任何问题。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Spark基础入门</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">SparkCore</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">SparkSQL</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/whitevenus/7e12.html" title="基于Python的Spark——入门篇"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/cover/spark_on_python.jpg" onerror="this.onerror=null;this.src='/whitevenus/img/404.jpg'" alt="基于Python的Spark——入门篇"/></a><div class="content"><a class="title" href="/whitevenus/7e12.html" title="基于Python的Spark——入门篇">基于Python的Spark——入门篇</a><time datetime="2021-12-27T02:03:20.000Z" title="发表于 2021-12-27 10:03:20">2021-12-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/whitevenus/8a9c.html" title="计算机视觉与图像处理概述"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/cover/cv.jpg" onerror="this.onerror=null;this.src='/whitevenus/img/404.jpg'" alt="计算机视觉与图像处理概述"/></a><div class="content"><a class="title" href="/whitevenus/8a9c.html" title="计算机视觉与图像处理概述">计算机视觉与图像处理概述</a><time datetime="2021-12-14T00:13:24.000Z" title="发表于 2021-12-14 08:13:24">2021-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/whitevenus/fd4a.html" title="机器学习——入门篇"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/cover/MachineLearning.jpg" onerror="this.onerror=null;this.src='/whitevenus/img/404.jpg'" alt="机器学习——入门篇"/></a><div class="content"><a class="title" href="/whitevenus/fd4a.html" title="机器学习——入门篇">机器学习——入门篇</a><time datetime="2021-12-04T05:22:00.000Z" title="发表于 2021-12-04 13:22:00">2021-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/whitevenus/437f.html" title="树与二叉树(手撕二叉树)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/cover/tree.png" onerror="this.onerror=null;this.src='/whitevenus/img/404.jpg'" alt="树与二叉树(手撕二叉树)"/></a><div class="content"><a class="title" href="/whitevenus/437f.html" title="树与二叉树(手撕二叉树)">树与二叉树(手撕二叉树)</a><time datetime="2021-10-21T05:22:00.000Z" title="发表于 2021-10-21 13:22:00">2021-10-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/whitevenus/42b2.html" title="串"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/whitevenus/img/cover/pattern%20match.jpg" onerror="this.onerror=null;this.src='/whitevenus/img/404.jpg'" alt="串"/></a><div class="content"><a class="title" href="/whitevenus/42b2.html" title="串">串</a><time datetime="2021-10-13T00:22:00.000Z" title="发表于 2021-10-13 08:22:00">2021-10-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/whitevenus/img/cover/spark_on_python.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 <i id="heartbeat" style="color:#FF6A6A" class="fa fa-heartbeat"></i> MuWenTao</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="http://www.muwentao.club/">blog</a> !</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/whitevenus/js/utils.js"></script><script src="/whitevenus/js/main.js"></script><script src="/whitevenus/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
@@ -577,7 +656,7 @@ function panguInit () {
   }
 }
 
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/whitevenus/js/search/local-search.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
   document.querySelectorAll('#article-container span.katex-display').forEach(item => {
     btf.wrap(item, 'div', { class: 'katex-wrap'})
   })
