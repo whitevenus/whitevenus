@@ -6,7 +6,7 @@
 
 - 🔭 I‘m currently looking for a front-end internship
 - 💻 I’m currently learning HarmonyOS Develop.
-- ⚡ Fun fact: Open Source Fan/ Sports lover(running)
+- ⚡ Fun fact: Open Source Fan/ Sports lover(running etc.)
 
 #### 🧑‍💻 &nbsp;Tech Stack
 - 🛠 &nbsp;
