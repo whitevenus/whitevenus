@@ -35,3 +35,5 @@
 
 <br/>
 
+![grid snake animation](./snake.svg)
+
