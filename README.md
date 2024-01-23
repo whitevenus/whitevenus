@@ -29,8 +29,8 @@
 <br/>
 
 <a href="https://github.com/whitevenus">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=whitevenus&theme=buefy&show_icons=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&theme=buefy&layout=compact" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=whitevenus&theme=calm&show_icons=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&theme=calm&layout=compact" />
 </a>
 
 <br/>
