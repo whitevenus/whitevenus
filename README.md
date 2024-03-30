@@ -2,7 +2,7 @@
 
 #### 🤺 &nbsp;About Me 
 
-<img align="right" width="650" height="453" src="./img.jpg" />
+<img align="right" width="325" height="226" src="./img.jpg" />
 
 - 🔭 I‘m currently looking for a front-end internship
 - 💻 I’m currently learning HarmonyOS Develop.
