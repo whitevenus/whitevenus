@@ -2,7 +2,7 @@
 
 #### 🤺 &nbsp;About Me 
 
-<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/steven.png" />
+<img align="right" width="88" src="./img.jpg" />
 
 - 🔭 I‘m currently looking for a front-end internship
 - 💻 I’m currently learning HarmonyOS Develop.
