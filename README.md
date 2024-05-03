@@ -4,9 +4,9 @@
 
 <!-- <img align="right" width="325" height="226" src="./img.jpg" /> -->
 
-- 🔭 I‘m currently looking for a front-end internship
-- 💻 I’m currently learning HarmonyOS Develop.
-- ⚡ Fun fact: Open Source Fan/ Sports lover(running etc.)
+- 🔭 我目前在寻找一份前端实习工作.
+- 💻 正在复习前端相关知识.
+- ⚡ 兴趣爱好: 开源爱好者/阅读/运动(running etc.)
 
 #### 🧑‍💻 &nbsp;Tech Stack
 - 🛠 &nbsp;
