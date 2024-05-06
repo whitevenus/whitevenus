@@ -1,6 +1,6 @@
 ### Hello 👋, This is WhiteVenus
 
-#### 🤺 &nbsp;About Me 
+#### 🤺 &nbsp;About Me ![Codewars](https://www.codewars.com/users/whitevenus/badges/micro?theme=light)
 
 <!-- <img align="right" width="325" height="226" src="./img.jpg" /> -->
 
@@ -14,7 +14,7 @@
   ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
   ![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
   ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
-  ![Codewars](https://www.codewars.com/users/whitevenus/badges/micro?theme=light)
+  
 - 🌐 &nbsp;
   ![Vue.js](https://img.shields.io/badge/-Vue.js-333333?style=flat&logo=vuedotjs)
   ![Node.js](https://img.shields.io/badge/-Node.js-333333?style=flat&logo=nodedotjs&logoColor=339933)
