@@ -1,6 +1,6 @@
 ### Hello 👋, This is WhiteVenus
 
-#### 🤺 &nbsp;About Me ![Codewars](https://www.codewars.com/users/whitevenus/badges/micro?theme=light) [![Netlify Status](https://api.netlify.com/api/v1/badges/303c483e-fae0-4a1c-8c8a-1f7b3140091d/deploy-status)](https://app.netlify.com/sites/whitevenus-study-notes)
+#### 🤺 &nbsp;About Me ![Codewars](https://www.codewars.com/users/whitevenus/badges/micro?theme=light) [![Netlify Status](https://api.netlify.com/api/v1/badges/303c483e-fae0-4a1c-8c8a-1f7b3140091d/deploy-status)](https://app.netlify.com/sites/whitevenus-study-notes.netlify.app)
 
 <!-- <img align="right" width="325" height="226" src="./img.jpg" /> -->
 
