@@ -14,11 +14,13 @@
   ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
   ![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
   ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
+  ![C++](https://img.shields.io/badge/-C&C++-333333?style=flat&logo=C++)
   
 - 🌐 &nbsp;
   ![Vue.js](https://img.shields.io/badge/-Vue.js-333333?style=flat&logo=vuedotjs)
   ![Node.js](https://img.shields.io/badge/-Node.js-333333?style=flat&logo=nodedotjs&logoColor=339933)
   ![Tensorflow](https://img.shields.io/badge/-Tensorflow-333333?style=flat&logo=tensorflow)
+  
 - ⚙️ &nbsp;
   ![Git](https://img.shields.io/badge/-Git-333333?style=flat&logo=git)
   ![GitHub](https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github)
@@ -30,8 +32,8 @@
 <br/>
 
 <a href="https://github.com/whitevenus">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=whitevenus&theme=calm&show_icons=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&theme=calm&layout=compact" />
+  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=whitevenus&theme=calm&show_icons=true" />
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&theme=calm&layout=compact" />
 </a>
 
 <br/>
