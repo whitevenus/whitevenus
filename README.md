@@ -4,9 +4,9 @@
 
 <!-- <img align="right" width="325" height="226" src="./img.jpg" /> -->
 
-- 🔭 我目前在寻找一份前端实习工作.
-- 💻 正在复习前端相关知识.
-- ⚡ 兴趣爱好: 开源爱好者/阅读/运动(running etc.)
+- 🔭 I am currently looking for a C&C++ internship.
+- 💻 I am learning about C&C++.
+- ⚡ Interests: Open source enthusiasts/reading/sports(running etc.)
 
 #### 🧑‍💻 &nbsp;Tech Stack
 - 🛠 &nbsp;
