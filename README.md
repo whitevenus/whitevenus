@@ -31,9 +31,10 @@
 
 <br/>
 
-<!-- hide=issues,contribs -->
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whitevenus&show_icons=true&line_height=30&hide_border=true&hide_title=false)
+<!-- ![GitHub Stats]() hide=issues,contribs -->
+
 <!-- ![Top Languages]() layout=compact -->
+<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&hide_border=true&hide_title=false](https://github-readme-stats.vercel.app/api?username=whitevenus&show_icons=true&line_height=30&hide_border=true&hide_title=false" />
 <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&hide_border=true&hide_title=false" />
 
 <br/>
