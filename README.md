@@ -30,8 +30,13 @@
 
 
 <br/>
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whitevenus&show_icons=true&line_height=30&hide=issues,contribs&hide_border=true&hide_title=true)
+<!--
+<a href="https://github.com/whitevenus">
+  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=whitevenus&theme=calm&show_icons=true" />
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&theme=calm&layout=compact" />
+</a>
+-->
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whitevenus&show_icons=true&line_height=30)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&layout=compact&hide_border=true&hide_title=true)
 <br/>
 
