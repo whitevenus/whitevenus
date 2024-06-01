@@ -31,8 +31,8 @@
 
 <br/>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whitevenus&show_icons=true&line_height=30&hide=issues,contribs&hide_border=false&hide_title=false)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&layout=compact&hide_border=false&hide_title=false)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whitevenus&show_icons=true&line_height=30&hide_border=true&hide_title=false)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&layout=compact&hide_border=true&hide_title=false)
 <br/>
 
 ![grid snake animation](./snake.svg)
