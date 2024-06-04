@@ -37,11 +37,14 @@
 <!-- ![GitHub Stats]() hide=issues,contribs -->
 
 <!-- ![Top Languages]()  -->
-
+![whitevenus's GitHub stats](https://github-readme-stats.vercel.app/api?username=whitevenus&count_private=true&theme=dark&show_icons=true)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+<!-- 
 <a>
     <img align="left" src="https://github-readme-stats.vercel.app/api?username=whitevenus&show_icons=true&hide_border=true&hide_title=false" />
     <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whitevenus&hide_border=true&hide_title=false" />
 </a>
+-->
 <br/>
 
 ![grid snake animation](./snake.svg)
