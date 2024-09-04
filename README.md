@@ -9,7 +9,7 @@
 
 <!-- <img align="right" width="325" height="226" src="./img.jpg" /> -->
 
-- 🔭 I am currently working as a front-end for a medium-sized company.
+- 🔭 I am currently working as a Front-end Internship for a medium-sized company.
 - 💻 I am learning about design pattern.
 - ⚡ Interests: Open source enthusiasts/reading/sports(running etc.)
 
