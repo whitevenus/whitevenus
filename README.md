@@ -9,8 +9,8 @@
 
 <!-- <img align="right" width="325" height="226" src="./img.jpg" /> -->
 
-- 🔭 I am currently looking for a C&C++ internship.
-- 💻 I am learning about C&C++.
+- 🔭 I am currently working as a front-end for a medium-sized company.
+- 💻 I am learning about design pattern.
 - ⚡ Interests: Open source enthusiasts/reading/sports(running etc.)
 
 #### 🧑‍💻 &nbsp;Tech Stack
